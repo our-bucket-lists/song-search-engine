@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask_restx import Resource, Api, reqparse
 from werkzeug.exceptions import BadRequest
 from mylib.songapi import song_look_up
@@ -8,6 +9,7 @@ init_root_logger()
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
 
 parser = reqparse.RequestParser()
 parser.add_argument('board', default='', type=str, help='')
