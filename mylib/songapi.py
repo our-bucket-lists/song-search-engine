@@ -20,7 +20,7 @@ def song_look_up(board: str = '', cus_type: str = '', keyword: str = '',
         'oid': oid,
         'sex': sex,
         'singer': singer,
-        'songDate': 'null' if song_date=='' else song_date,
+        'songDate': 'null' if song_date == '' else song_date,
     }
 
     url = f'{SERVER}{BASE_PATH}?company={COMPANY}'
