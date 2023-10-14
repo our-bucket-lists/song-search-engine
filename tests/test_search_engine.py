@@ -1,6 +1,6 @@
 import json
 import logging
-from api import app
+from app import app
 
 
 def test_search_by_keyword():
